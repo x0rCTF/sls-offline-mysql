@@ -1,0 +1,21 @@
+
+
+service: serverless-offline
+
+frameworkVersion: '3'
+
+plugins:
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+functions:
+  hello:
+    handler: handler.hello
+    # events:
+    #   - schedule: 
+    #       rate: rate(1 minute)
+    #       enabled: true
+    #       input: {"scheduler":"1-minute"}
