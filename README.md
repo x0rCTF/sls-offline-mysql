@@ -24,7 +24,9 @@ CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
 GRANT ALL PRIVILEGES ON * . * TO 'newuser'@'localhost';
 ```
 
-Invoke lambda localy.
+Invoke lambda localy with serverless offline.
 ```bash
-aws lambda invoke /dev/null   --endpoint-url http://localhost:3002   --function-name serverless-offline-dev-hello
+aws lambda invoke /dev/null \
+  --endpoint-url http://localhost:3002 \
+  --function-name serverless-offline-dev-hello
 ```
